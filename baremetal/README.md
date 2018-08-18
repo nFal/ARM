@@ -1,1 +1,1 @@
-This repo contains code written for ARM processors
+Baremetal code for ARM
