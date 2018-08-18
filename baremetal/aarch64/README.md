@@ -13,8 +13,6 @@ make
 Baremetal GCC ARM toolchain can be obtained from:  
 https://releases.linaro.org/components/toolchain/binaries/latest/aarch64-elf/
 
-Both the simulator and gcc binaries are also present in the 'binaries' directory.
-
 To run:  
 cd aarch64/  
 make (compiles and links test64.c, startup64.s using the linker script test64.ld; produces test64.elf)  
