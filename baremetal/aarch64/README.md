@@ -2,7 +2,7 @@ Basic baremetal code demonstration for aarch64.
 
 The basic assembly code startup64.s calls a C subroutine that prints "Hello world!". It then prints letters A-Z from a subroutine in assembly itself.
 
-To run, you need qemu-system-aarch64 (arm aarch64 simulator from the QEMU project) and baremetal gcc ARM toolchain.
+To run, you need qemu-system-aarch64 (arm aarch64 simulator from the QEMU project) and baremetal gcc arm toolchain.
 
 qemu-system-aarch64 build steps:  
 git clone git://git.qemu.org/qemu.git qemu.git  
