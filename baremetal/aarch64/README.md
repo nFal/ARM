@@ -1,7 +1,21 @@
 Basic baremetal code demonstration for aarch64.
 
-The basic assembly code calls a C subroutine, that prints "Hello world!". It then prints letters A-Z from a subroutine in assembly.
+The basic assembly code startup64.s calls a C subroutine that prints "Hello world!". It then prints letters A-Z from a subroutine in assembly itself.
 
-To run you need qemu-system-aarch64 (ARM simulator from the QEMU project) and the gcc ARM toolchain.
+To run, you need qemu-system-aarch64 (ARM aarch64 simulator from the QEMU project) and baremetal gcc ARM toolchain.
 
-The makefile default target compiles and links the assembly and C files and generates the ARM elf. Execute "make run" after that to run it on the simulator.  
+qemu-system-aarch64 build steps:
+git clone git://git.qemu.org/qemu.git qemu.git
+cd qemu.git
+./configure --target-list=aarch64-softmmu
+make
+
+Baremetal GCC ARM toolchain can be obtained from:
+https://releases.linaro.org/components/toolchain/binaries/latest/aarch64-elf/
+
+Both the simulator and gcc binaries are also present in the 'binaries' directory.
+
+Most of the information are from the following pages:
+1. https://balau82.wordpress.com/2010/02/28/hello-world-for-bare-metal-arm-using-qemu/
+2. https://github.com/freedomtan/aarch64-bare-metal-qemu
+3. https://www.bennee.com/~alex/blog/2014/05/09/running-linux-in-qemus-aarch64-system-emulation-mode/
